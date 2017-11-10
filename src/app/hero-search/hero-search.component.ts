@@ -31,7 +31,7 @@ export class HeroSearchComponent implements OnInit {
   ngOnInit(): void {
     this.heroes$ = this.searchTerms.pipe(
       // wait 300ms after each keystroke before considering the term
-      debounceTime(10),
+      debounceTime(300),
 
       // ignore new term if same as previous term
       distinctUntilChanged(),
